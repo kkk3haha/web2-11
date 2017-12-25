@@ -7,12 +7,12 @@
   <script type="text/javascript" src="ncmb.min.js" charset="utf-8"></script>
   <script>
     //mobile backend アプリとの連携
-    var ncmb=new NCMB("0416410848e6e31a97704bb0575a7203362a1df2f0457a6bf39a4c3133103b00","de9b67cdaf3ec0ee0d58993c450b8e2d3e4cb8a232d930381fe86a4499b80a97");
+    var ncmb = new NCMB("0416410848e6e31a97704bb0575a7203362a1df2f0457a6bf39a4c3133103b00","de9b67cdaf3ec0ee0d58993c450b8e2d3e4cb8a232d930381fe86a4499b80a97");
     
     //クラスのTestClassを作成
-    var TestClass = new ncmb.DataStore("testClass");
+    var TestClass = ncmb.DataStore("testClass");
     //データストアへの登録
-    var testClass= new TestClass();
+    var testClass = new TestClass();
     testClass.set("message","Hello, NCMB!");
     testClass.save()
       .then(function(){
